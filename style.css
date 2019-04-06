@@ -1,0 +1,32 @@
+/* 
+#2C3531
+#116466
+#D9B08C
+#FFCB9A
+#D1E8E2
+
+a:link, visited {
+    color: black;
+}
+*/
+body {
+    background-color: #FFCB9A;
+    text-align: center;
+}
+a {
+    font-size: 3 em;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:link {
+    color: white;
+}
+a:hover {
+    color: white;
+}
+h1 {
+    color: #D1E8E2;
+    font-size: 20px;
+}
