@@ -11,9 +11,14 @@ a:link, visited {
 */
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39|Permanent+Marker');
 body {
-    background-color: #2C3531;
+    background-color: #D9B08C;
     text-align: center;
     font-family: 'Permanent Marker', sans-serif;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 a {
     font-size: 3 em;
@@ -29,12 +34,17 @@ a:hover {
     color: black;
 }
 h1 {
-    color: #D9B08C;
+    color: #2C3531;
     font-size: 20px;
 }
 span {
     font-weight: bold;
+    font-size: 30px; 
 }
 #bigFont {
     font-size: 100px;
 }
+class {
+    
+}
+ 
