@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script> // Element to write Java Script in 
+        var canvas; // Create a variable called canvas, but it does not have a value yet.
+        var ctx; // Create a variable called ctx (context)
+        const UNIT = 21;
+        window.onload = init; // When the window is loaded, run the init function.
+        function init() { // Function: Set of instructions that could be called
+            canvas = document.getElementById("myCanvas"); // Connecting Java Script canvas to HTML canvas 
+            ctx = canvas.getContext("2d"); // Setting the context of the canvas to 2d
+            drawName(); 
+        }
+    </script>
+    <script src="drawName.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Drawing</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Homepage</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="800" height="500"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+</body>
+
+</html>

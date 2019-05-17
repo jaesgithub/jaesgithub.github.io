@@ -31,11 +31,11 @@ a:link {
     color: white;
 }
 a:hover {
-    color: black;
+    color: #2C3531;
 }
 h1 {
     color: #2C3531;
-    font-size: 20px;
+    font-size: 3em;
 }
 span {
     font-weight: bold;
@@ -45,7 +45,22 @@ span {
 #bigFont {
     font-size: 100px;
 }
-class {
-
+section {
+    border-style: solid; 
+    border-width: thick;
+    border-color: #2C3531;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+#text-center {
+    text-align: center;
+}
+canvas {
+    background-color: white;
 }
  
