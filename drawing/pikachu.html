@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script> // Element to write Java Script in 
+        var canvas; // Create a variable called canvas, but it does not have a value yet.
+        var ctx; // Create a variable called ctx (context)
+        const UNIT = 10;
+        window.onload = init; // When the window is loaded, run the init function.
+        function init() { // Function: Set of instructions that could be called
+            canvas = document.getElementById("myCanvas"); // Connecting Java Script canvas to HTML canvas 
+            ctx = canvas.getContext("2d"); // Setting the context of the canvas to 2d
+            drawBackground();
+            drawPikachus();
+            drawGroundBlocks();
+        }
+        function drawBackground(){
+            // Blue background
+            ctx.fillStyle ="#40ADFA";
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            // Ground
+            ctx.fillStyle ="brown";
+            ctx.fillRect(0,40*UNIT,80*UNIT,10*UNIT);
+            ctx.save();
+            ctx.translate(40*UNIT,41*UNIT);
+            drawName();
+            ctx.restore();
+        }
+        function drawPikachus() {
+            ctx.save();
+            ctx.translate(0*UNIT,15*UNIT);
+            drawWalkingPikachu(1);
+            ctx.restore();
+            ctx.save();
+            ctx.translate(24*UNIT,16*UNIT);
+            drawWalkingPikachu(2);
+            ctx.restore();
+            ctx.save();
+            ctx.translate(47*UNIT,16*UNIT);
+            drawWalkingPikachu(3);
+            ctx.restore();
+        }
+        function drawGroundBlocks() {
+            ctx.save();
+            ctx.translate 
+            ctx.fillRect(0,25*UNIT,20,10)
+        }
+
+    </script>
+    <script src="drawPikachu.js"></script>
+    <script src="drawName.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pikachu</h1>
+    </header>
+    <nav>
+        <a href="drawing.html">Drawing</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="800" height="500"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+</body>
+
+</html>
