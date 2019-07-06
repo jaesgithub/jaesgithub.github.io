@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animation</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        var canvas;
+        var ctx;
+        const UNIT = 5;
+        var requestID;
+        var positionX = 1;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            requestID = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            changePositionX();
+            animatePikachu();
+            requestID = requestAnimationFrame(animationLoop);
+        }
+        function changePositionX() {
+            positionX += 1;
+        }
+        function animatePikachu() {
+            drawWalkingPikachu(positionX, 0, 2);
+        }
+    </script>
+    <script src="../drawing/drawPikachu.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Animation</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Homepage</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="800" height="500"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+</body>
+
+</html>

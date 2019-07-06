@@ -3,17 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="../style.css">
-    <script> // Element to write Java Script in 
-        var canvas; // Create a variable called canvas, but it does not have a value yet.
-        var ctx; // Create a variable called ctx (context)
+    <script> 
+        var canvas;
+        var ctx; 
         const UNIT = 10;
-        window.onload = init; // When the window is loaded, run the init function.
-        function init() { // Function: Set of instructions that could be called
-            canvas = document.getElementById("myCanvas"); // Connecting Java Script canvas to HTML canvas 
-            ctx = canvas.getContext("2d"); // Setting the context of the canvas to 2d
+        window.onload = init; 
+        function init() { 
+            canvas = document.getElementById("myCanvas"); 
+            ctx = canvas.getContext("2d"); 
             drawBackground();
             drawPikachus();
-            drawGroundBlocks();
         }
         function drawBackground(){
             // Blue background
@@ -22,30 +21,17 @@
             // Ground
             ctx.fillStyle ="brown";
             ctx.fillRect(0,40*UNIT,80*UNIT,10*UNIT);
-            ctx.save();
-            ctx.translate(40*UNIT,41*UNIT);
-            drawName();
-            ctx.restore();
+            drawName(120, 91, 0.5);
         }
         function drawPikachus() {
-            ctx.save();
-            ctx.translate(0*UNIT,15*UNIT);
-            drawWalkingPikachu(1);
-            ctx.restore();
-            ctx.save();
-            ctx.translate(24*UNIT,16*UNIT);
-            drawWalkingPikachu(2);
-            ctx.restore();
-            ctx.save();
-            ctx.translate(47*UNIT,16*UNIT);
-            drawWalkingPikachu(3);
-            ctx.restore();
+            drawWalkingPikachu(0,15,1);
+            drawWalkingPikachu(24,1,2);
+            drawWalkingPikachu(23,0,3);
+            drawRunningPikachu(1,1,1);
         }
-        function drawGroundBlocks() {
-            ctx.save();
-            ctx.translate 
-            ctx.fillRect(0,25*UNIT,20,10)
-        }
+        // function drawGroundBlocks() {
+        //     drawGoundBlock(0,0,1)
+        // }
 
     </script>
     <script src="drawPikachu.js"></script>

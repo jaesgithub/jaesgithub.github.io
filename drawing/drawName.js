@@ -1,4 +1,7 @@
-function drawName() {
+function drawName(x, y, scale) {
+    ctx.save();
+    ctx.scale(scale, scale);
+    ctx.translate(x * UNIT, y * UNIT);
     ctx.fillStyle = "black"; // Changes the fill colour to the value indicated.
     // ctx.fillRect(25*UNIT,10*UNIT,5*UNIT,5*UNIT);
     // ctx.fillRect(50*UNIT,10*UNIT,5*UNIT,5*UNIT);
@@ -50,4 +53,5 @@ function drawName() {
     ctx.fillRect(37 * UNIT, 8 * UNIT, 2 * UNIT, 1 * UNIT);
     //ctx.fillRect(*UNIT,*UNIT,*UNIT,*UNIT);
     // Homework: Write my name on the convas 
+    ctx.restore();
 }

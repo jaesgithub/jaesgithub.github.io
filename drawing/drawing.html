@@ -3,17 +3,17 @@
 
 <head>
     <link rel="stylesheet" href="../style.css">
-    <script> // Element to write Java Script in 
+    <script> // Element to write Java Script in, using sources
         var canvas; // Create a variable called canvas, but it does not have a value yet.
         var ctx; // Create a variable called ctx (context)
-        const UNIT = 15;
+        const UNIT = 15; // A constant unit that creates a sizing for the variables used by the ctx.fillRect
         window.onload = init; // When the window is loaded, run the init function.
-        function init() { // Function: Set of instructions that could be called
+        function init() { // Function: Set of instructions that runs all the content within the curly braces 
             canvas = document.getElementById("myCanvas"); // Connecting Java Script canvas to HTML canvas 
             ctx = canvas.getContext("2d"); // Setting the context of the canvas to 2d
             // drawName(); 
-            drawWalkingPikachu(3);
-            drawRuler(1);
+            drawRunningPikachu(0,0,1); // Set of instructions to draw Pikachu
+            drawRuler(1); // Creates a ruler for the canvas 
         }
         // function drawGroundBlocks
     </script>
@@ -39,3 +39,12 @@
 </body>
 
 </html>
+<!-- // Element to write Java Script in 
+        var canvas; // Create a variable called canvas, but it does not have a value yet.
+        var ctx; // Create a variable called ctx (context)
+        const UNIT = 10;
+        window.onload = init; // When the window is loaded, run the init function.
+        function init() { // Function: Set of instructions that copys what inside of the curly braces and loads the content on to the canvas.
+            canvas = document.getElementById("myCanvas"); // Connecting Java Script canvas to HTML canvas.
+            ctx = canvas.getContext("2d"); // Setting the context of the canvas to 2d
+            drawBackground(); -->
