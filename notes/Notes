@@ -1,0 +1,24 @@
+// Shortcuts:
+command r
+to run the application
+command . 
+to stop the application
+command enter/return
+to standard editor 
+command option enter/return
+to assistant editor 
+command zero 
+to show navigator on the left
+command option zero 
+to show navigator on the right
+command shift y
+to show console 
+command 1
+to show folders
+command 4 
+to show notes 
+command 5 
+to show errors
+command shift l
+viewdidload runs when screen is loaded, the first function loaded
+in the lightbulb app add three additional buttons anywhere on the app, and some more extra features on the app

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swift Notes</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Interface Builder Basics</h1>
+        </header>
+        <nav>
+            <a href="notes.html">Notes</a>
+            <a href="../index.html">Homepage</a>
+        </nav>
+        <section>
+            <h2>Storyboards</h2>
+            <ul>
+                <li>Interface Builder opens whenever selected an XIB file (.xib) or a storyboard file (.storyboard) from the project navigator</li>
+            </ul>
+            <h2>XIB</h2>
+            <ul>
+                <li>An XIB file contains user interface for a single visual element, i.e. full-screen view, a table view cell, or a custom UI control</li>
+                <li>Were used more heavily before the introduction of storyboards</li>
+                <li>Still a useful format in certain situations</li>
+                <br>
+                <img src="../images/swiftNotes19.png">
+            </ul>
+            <h2>Initial View Controller</h2>
+            <ul>
+                <li>To open, click Main.storyboard in the project navigator to open the file in Interface Builder</li>
+                <li>In the center of the screen, the single scene with a plain white view on a black canvas</li>
+                <li>The scene is called the initial view controller, the first screen that appears when the app is opened</li>
+                <li>You can add more scenes to the storyboard, and drag them anywhere on the canvas</li>
+                <li>To see more view controllers at once, use two fingers on a Multi-Touch trackpad to pinch and zoom the canvas out or to zoom in on a particular view</li>
+                <br>
+                <img src="../images/swiftNotes20.png">
+            </ul>
+            <h2>Interface Builder Layout</h2>
+            <ul>
+                <li>To the left of the main canvas is the Document Outline view</li>
+                <li>To reveal the Document Outline Review, click the Show Document Outline Button in the bottom left corner of the canvas</li>
+                <img src="../images/swiftNotes22.png">
+                <li>The Document Outline displays a list of each view controller in the scene, along with the a hierachical list of the elements within each view controller</li>
+
+            </ul>
+            <h2>Outlets and Actions</h2>
+            <ul>
+                <li>Often need a way to refrence your visual elements in code so that can be adjusted at runtime, or when the app is already running</li>
+                <li>This refrence from Interface Builder code if called outlet</li>
+                <li>When you have an object that you want the user to interact with, create action - a refrence to a piece of code that will execute when the interaction takes place</li>
+                <br>
+                <li>Select the view controller in outline view, then select Identity inspector</li>
+                <li>The template chosen when creating the project has set the Custom Class to ViewController</li>
+                <li>Open the Assistant editor, shows the definition of ViewController displayed alongside storyboard (since it corresponds to Custom Class field in Identity inspector)</li>
+                <img src="../images/swiftNotes23.png">
+                <br>
+                <li>However, ViewController class doesn't have access to the button added</li>
+                <li>To make the object accessible code, create outlet</li>
+                <ul>
+                    <li>Creating an Outlet</li>
+                    <ul>
+                        <li>Control-click (or right-click) the button in storyboard, then start dragging toward Assistant editor pane, contains ViewController class definition</li>
+                        <li>As you drag the cursor into the code, a blue line appears</li>
+                        <li>Release the cursor, "Outlets and Actions" dialog appears, with Outler selected as Connection type</li>
+                        <li>In Name field, specify a variable name for button: 'myButton."</li>
+                        <li>Click the Connect button to finalize creation of outlet, generating line of code defining outlet</li>
+                        <img src="../images/swiftNotes24.png">
+                    </ul>
+                    <li>Creating an Action</li>
+                    <ul>
+                        <li>Control-click (or right-click) button in storyboard, then drag cursor into ViewController class definition</li>
+                        <img src="../images/swiftNotes25.png">
+                        <br>
+                        <li>When "Outlets and Actions" dialog appears this time, need to switch Connection from Outlet to Action</li>
+                        <li>in this situation, entry in Name field deos not define variable; defines action the button tap is tied to</li>
+                        <li>Name the action "buttonPressed." Click the Connect button to finalize creation of action</li>
+                    </ul>
+                </ul>
+            </ul>
+            <h2>Outlet Definition</h2>
+            <ul>
+                <li>Circle - The filled circle indicates outlet is connected. If circle empty, variable is not connected anything</li>
+                <li>@IBOutlet - Unique to Interface Builder, keyword specifies relationship between variable and storyboard. Without @IBOutlet keyword, the circle doesn't display</li>
+                <li>weak - This keyword describes details about relationship between ViewController and myButton</li>
+                <li>var myButton - Declares variable called "myButton"</li>
+                <li>: UIButton! - Tyoe of the preoperty is UIButton, button type within UIKit framework. Exclamation point warns the program will crash if this property is accessed and outlet is not connected</li>
+            </ul>
+            <h2>A Note About Interface Builder</h2>
+            <h2>UILabel</h2>
+            <ul>
+                <li>Symbols, or properties and functions, for the UILabel</li>
+                <br>
+                <li>Interface Builder Attribute and Property Name</li>
+                <ul>
+                    <img src="../images/swiftNotes21.png">
+                </ul>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2019</p>
+        </footer>
+    </body>
+</html>
